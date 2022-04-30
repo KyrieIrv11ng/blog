@@ -29,6 +29,7 @@ public class MarkdownUtils {
         Node document = parser.parse(markdown);
         HtmlRenderer renderer = HtmlRenderer.builder().build();
         return renderer.render(document);
+
     }
 
     /**
@@ -52,6 +53,7 @@ public class MarkdownUtils {
                 .attributeProviderFactory(new AttributeProviderFactory() {
                     public AttributeProvider create(AttributeProviderContext context) {
                         return new CustomAttributeProvider();
+
                     }
                 })
                 .build();
